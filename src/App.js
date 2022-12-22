@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 
-import Document from "./components/Document";
+import Document from "./Document";
 
 function App() {
   const [content, setContent] = useState("");
@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     // Make the API call to fetch the content
-    fetch("https://loripsum.net/api/long/plaintext")
+    fetch("https://loripsum.net/api")
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
