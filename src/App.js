@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     // Make the API call to fetch the content
-    fetch("https://loripsum.net/api")
+    fetch("https://jaspervdj.be/lorem-markdownum/markdown.txt")
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
@@ -41,7 +41,7 @@ function App() {
               content={content}
               onScroll={handleScroll}
             />
-            <button disabled={!isButtonEnabled}>I Agree</button>
+            <button disabled={isButtonEnabled}>I Agree</button>
           </div>
         </div>
       </div>
